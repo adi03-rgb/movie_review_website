@@ -1,21 +1,20 @@
 .hero{
     position: relative;
     height: 60vh;
-    min-height: 420px;
-    overflow: hidden;
+    min-height: 440px;
     display: flex;
     align-items: center;
     justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
 }
 .bg.left{
     left: 0;
-    top: -5%;
+    top: 0;
     position: absolute;
-    height: 110%;
+    height: 100%;
     width: 100%;
     background: var(--hero-gradient);
-    transform: skewY(-3deg);
-    transform-origin: top left;
 }
 
 .content {
@@ -65,8 +64,8 @@
     z-index: 2;
     clear: both;
     max-width: 1100px;
-    margin: 80px auto 80px;
-    padding: 40px 24px 60px;
+    margin: 40px auto 80px;
+    padding: 20px 24px 60px;
     display: flex;
     flex-direction: column;
     gap: 40px;
