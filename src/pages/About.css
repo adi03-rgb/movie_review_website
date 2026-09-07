@@ -1,6 +1,11 @@
+.aboutPageContainer {
+    width: 100%;
+    padding-top: 150px;
+    box-sizing: border-box;
+}
+
 .hero{
     position: relative;
-    margin-top: 150px;
     height: 60vh;
     min-height: 440px;
     display: flex;

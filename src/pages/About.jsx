@@ -29,7 +29,7 @@ const About = () => {
     : "var(--hero-gradient)";
 
   return (
-    <div>
+    <div className="aboutPageContainer">
         <section className="hero">
           <AnimatePresence mode="wait">
             <Motion.div 
