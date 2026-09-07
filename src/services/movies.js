@@ -1,10 +1,5 @@
 import express from "express";
 import { tmdb } from "./tmdbService.js";
-import fs from "fs";
-import path from "path";
-import crypto from "crypto";
-import youtubedl from "youtube-dl-exec";
-import axios from "axios";
 import redisClient from "./redisClient.js";
 const router = express.Router();
 

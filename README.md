@@ -1,112 +1,158 @@
 # 🍿 POPTALE
 
-**POPTALE** is a modern, dynamic web application designed for movie and TV series enthusiasts. It goes beyond standard ratings by using **sentiment analysis** to read through user reviews and automatically extract the best and worst aspects of a film or show. 
+<p align="center">
+  <img src="public/pp.gif" alt="Poptale Logo" width="120" />
+</p>
 
-With a beautiful UI, seamless TMDB integration, and a Firebase backend, POPTALE helps you decide exactly what to watch next.
+<p align="center">
+  <b>Entertainment isn't just content — it's a tale worth popping into.</b>
+</p>
 
+<p align="center">
+  <a href="#-live-demo">🚀 Live Demo</a> •
+  <a href="#-why-poptale">✨ Why Poptale</a> •
+  <a href="#-features">🔥 Features</a> •
+  <a href="#%EF%B8%8F-tech-stack">🛠️ Tech Stack</a> •
+  <a href="#-architecture">📐 Architecture</a> •
+  <a href="#-local-development">💻 Local Setup</a>
+</p>
 
-=======
->>>>>>> 93f23562c754c9a68813d82bdaa4806f6ee38f10
+---
 
-## Features
+## 🚀 Live Demo
 
-- **Sentiment Analysis:** The application goes beyond standard numerical ratings by performing natural language processing on written reviews. It analyzes both external TMDB reviews and local user comments to calculate an aggregated "Community Score" based on emotional tone, categorizing the overall reception into distinct tiers ranging from "Great vibes" to "Not great."
-- **Review Summarization:** By evaluating the context of user reviews, the system automatically extracts the most impactful quotes and categorizes them into positive highlights (e.g., Story, Acting, Cinematography) and areas for improvement (e.g., Pacing, VFX). This provides users with a quick, qualitative summary of community consensus without needing to read hundreds of comments.
-- **Comment-driven Genres:** The platform generates a dynamic pie chart that visualizes the genres the community most strongly associates with a film or show. This is calculated dynamically by cross-referencing keyword occurrences in reviews with their associated sentiment, ensuring the chart reflects the audience's actual experience rather than just the studio's official classification.
-- **Smart Ratings:** Titles are automatically assigned quick-glance rating labels such as "Go For It!!!", "Watchable", "Timepass", and "Skip". These labels are dynamically calculated by merging official TMDB vote averages with localized user ratings from the platform, ensuring a balanced and trustworthy metric.
-- **User Authentication:** The application features a robust and secure authentication system powered by Firebase Auth. Users can seamlessly create accounts, log in, and manage their personal profiles to interact with the platform's features.
-- **Watchlist & Ratings:** Authenticated users can build their own personalized watchlists by saving movies and TV shows for later viewing. Additionally, users can submit their own custom numerical ratings for titles, which are securely stored in Firestore and actively contribute to the platform's global average metrics.
+- 🌐 **Live Website:** [Launch Poptale](https://your-poptale-url.vercel.app) *(Update with your Vercel URL)*
+- ⚡ **Backend API:** [API Health](https://your-backend-url.onrender.com) *(Update with your Render URL)*
 
-<<<<<<< HEAD
+---
+
+## ✨ Why Poptale?
+
+Most entertainment platforms overwhelm users with cold 1-to-10 ratings, convoluted algorithms, and endless scrolling. 
+
+**POPTALE** turns browsing into real discovery:
+- **Clear Watchability Ratings:** We replace confusing numbers with intuitive categories (*Go For It!!!*, *Watchable*, *Timepass*, *Skip*).
+- **Reddit Community Discussions:** Every title links directly to live Reddit threads and official discussion megathreads.
+- **Sentiment Analysis:** We process written reviews using Natural Language Processing to extract emotional consensus and highlight pros & cons.
+- **Personalized Profiles:** Build your personal watchlist, track watched titles, and review your dynamic genre breakdown.
+
+---
+
+## 🔥 Key Features
+
+### 🎯 Intuitive "Watchability" Ratings
+Instead of guessing whether a 6.8/10 is worth your evening, POPTALE combines TMDB scores and user sentiment to categorize titles:
+- **Go For It!!!** — Outstanding cinema, absolute must-watch.
+- **Watchable** — Solid entertainment that delivers on its premise.
+- **Timepass** — Fun, casual viewing when you just want to relax.
+- **Skip** — Save your time for something better.
+
+### 💬 Deep Reddit Discussion Links
+Movies are meant to be discussed. Every movie and series on Poptale links straight to its dedicated Reddit discussions and r/movies megathreads for instant access to fan theories, hidden details, and post-credits breakdowns.
+
+### 🧠 Sentiment Analysis & Review Summarization
+Using AFINN-based Natural Language Processing, POPTALE analyzes community and TMDB reviews to score emotional consensus. It automatically highlights community thoughts across:
+- **Story & Writing**
+- **Acting & Performance**
+- **Direction & Cinematography**
+- **Pacing & Visual Effects (VFX)**
+
+### 📊 Audience-Driven Genre Pie Charts
+Studio tags don't always capture the real vibe. Our dynamic Recharts visualization maps what genres audiences *actually* experienced based on sentiment and keyword occurrence in reviews.
+
+### ⚡ Blazing-Fast Caching with Redis
+Trending titles, upcoming releases, and genres are cached with Upstash Redis, eliminating API latency and rate limits for near-instant page loads.
+
+### 👤 Profile & Personalized Watchlists
+- Real-time user profile sync backed by **Firebase Auth & Firestore**.
+- Keep track of what you've watched, rate your favorites, and build your queue.
+- Tailored genre recommendations that adapt as your taste evolves.
+
 ---
 
 ## 🛠️ Tech Stack
-=======
 
-## Tech Stack
->>>>>>> 93f23562c754c9a68813d82bdaa4806f6ee38f10
+```
+Frontend (Vercel)         Backend (Render)             Data & Cache Layer
+┌─────────────────┐       ┌────────────────────┐       ┌─────────────────────┐
+│  React 19       │ ───▶  │  Node.js / Express │ ───▶  │  TMDB API           │
+│  Vite           │       │  REST API Gateway  │       │  Upstash Redis      │
+│  Framer Motion  │       │  Dynamic Port Env  │       │  Firebase Firestore │
+│  Recharts       │       └────────────────────┘       │  Firebase Auth      │
+└─────────────────┘                                    └─────────────────────┘
+```
 
-### Frontend
-- **React (Vite):** Fast, modern component-based UI.
-- **React Router:** Seamless client-side navigation.
-- **Recharts:** For rendering the beautiful, dynamic genre pie charts.
-- **Framer Motion:** For smooth, cinematic page and card animations.
-- **Vanilla CSS:** Custom, aesthetic styling with CSS variables for theming.
-
-### Backend & Services
-- **Node.js & Express:** A lightweight backend server (`server.js`) that safely proxies requests to the TMDB API.
-- **Firebase:** 
-  - *Firestore:* Real-time database for user comments, ratings, and watchlists.
-  - *Auth:* Secure user login and registration.
-- **Sentiment (npm package):** NLP processing to calculate the emotional delta of user comments.
-<<<<<<< HEAD
+- **Frontend:** React 19, Vite, React Router 7, Framer Motion, Recharts
+- **Styling:** Custom CSS with Glassmorphism, Responsive CSS Grid/Flexbox, Dark Mode
+- **Backend:** Node.js, Express 5
+- **NLP:** Sentiment (AFINN-based emotion extraction)
+- **Database & Auth:** Firebase Firestore, Firebase Authentication
+- **Caching:** Upstash Redis (High-speed caching for TMDB queries and genre payloads)
 
 ---
 
-## 🚀 Getting Started
+## 📐 Architecture & Production Ready
 
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
-
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/adi03-rgb/movie_review_website.git
-   cd movie_review_website
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Set up Environment Variables:**
-   Create a `.env` file in the root directory and add your API keys:
-   ```env
-   VITE_FIREBASE_API_KEY=your_firebase_api_key
-   VITE_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
-   VITE_FIREBASE_PROJECT_ID=your_firebase_project_id
-   VITE_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
-   VITE_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
-   VITE_FIREBASE_APP_ID=your_firebase_app_id
-   TMDB_API_KEY=your_tmdb_api_key
-   ```
-   *(Note: The `.env` file is excluded from version control via `.gitignore` for security).*
-
-4. **Start the Backend Server:**
-   Open a terminal and start the Express server:
-   ```bash
-   node src/components/server.js
-   ```
-
-5. **Start the Frontend Development Server:**
-   Open a second terminal and start Vite:
-   ```bash
-   npm run dev
-   ```
-
-6. **Open the App:**
-   Visit `http://localhost:5173` in your browser!
+- **Dynamic Environment Routing:** Decoupled frontend build using `import.meta.env.VITE_BACKEND_URL` for seamless local-to-cloud switching.
+- **Zero-Downtime Cache:** Trending lists and genre catalogs are cached in Redis to minimize third-party API rate limits and deliver snappy responses.
+- **Production Hardened:** Standard ES modules (`"type": "module"`), production startup scripts (`npm start`), and dynamic port binding (`process.env.PORT`).
 
 ---
 
-## 💡 How Sentiment Analysis Works
+## 💻 Local Development
 
-POPTALE doesn't just average out 5-star ratings. It actively reads the text of user reviews:
-1. It splits reviews into individual sentences.
-2. It assigns a mathematical sentiment score (positive/negative magnitude) to the sentence.
-3. It cross-references the sentence for aspect keywords (e.g., if a sentence mentions "CGI" or "Effects", it maps it to the VFX category).
-4. Finally, it extracts the most emotionally charged sentence as a quote and displays it directly on the movie's detail page!
+Follow these steps to run Poptale locally:
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/adi03-rgb/movie_review_website.git
+cd movie_review_website
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Setup Environment Variables
+Create a `.env` file in the root folder:
+
+```env
+# Server
+PORT=5000
+
+# TMDB API
+TMDB_API_KEY=your_tmdb_api_key
+
+# Redis (Upstash)
+UPSTASH_REDIS_REST_URL=your_upstash_redis_url
+UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_token
+
+# Frontend (Firebase & Backend URL)
+VITE_BACKEND_URL=http://localhost:5000
+VITE_FIREBASE_API_KEY=your_firebase_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+```
+
+### 4. Run the development servers
+In terminal 1 (Backend):
+```bash
+npm run server
+```
+
+In terminal 2 (Frontend):
+```bash
+npm run dev
+```
+
+Open `http://localhost:5173` in your browser!
 
 ---
 
-## 🤝 Contributing
+## 📄 License
 
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
-
-## 📝 License
-
-This project is licensed under the MIT License.
-=======
->>>>>>> 93f23562c754c9a68813d82bdaa4806f6ee38f10
+This project is licensed under the **MIT License**.
