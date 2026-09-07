@@ -1,9 +1,3 @@
-.aboutPageContainer {
-    width: 100%;
-    padding-top: 150px;
-    box-sizing: border-box;
-}
-
 .hero{
     position: relative;
     height: 60vh;
@@ -45,7 +39,7 @@
 }
 .hp{
     font-size: clamp(3.2rem, 7vw, 5.5rem);
-    margin: 0;
+    margin: 150px 0 0;
     padding: 0;
     color: #fff;
     font-weight: 900;
