@@ -1,0 +1,27 @@
+#im{
+    height: 300px;
+    padding-left: 300px;
+    
+}
+.ban{
+    
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    background: var(--hero-gradient);
+
+  background-size: cover;
+  transform: skewY(-3deg);
+  transform-origin: top left;
+}
+h1{
+    padding-right:30% ;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    transition: transform 0.5s ease;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}

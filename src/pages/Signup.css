@@ -1,0 +1,60 @@
+/* Signup genre picker with glassy effect */
+.genrePicker {
+  width: 100%;
+  max-width: 550px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.genreTitle {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.genreChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.genreChip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.genreChip:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.genreChip.active {
+  background: rgba(248, 113, 113, 0.8);
+  border-color: rgba(248, 113, 113, 1);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(248, 113, 113, 0.4);
+}
+
+.genreChip:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}

@@ -1,0 +1,110 @@
+.genrePieCard {
+  grid-column: span 2;
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(127, 127, 127, 0.06);
+  border: 1px solid var(--border);
+}
+
+.genrePieHeader {
+  margin-bottom: 12px;
+}
+
+.genrePieTitle {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.genrePieSubtitle {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.genrePieBody {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) minmax(140px, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+.genrePieChartWrap {
+  width: 100%;
+  min-height: 200px;
+}
+
+.genrePieLegend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.genrePieLegendItem {
+  display: grid;
+  grid-template-columns: 12px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.genrePieLegendSwatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.genrePieLegendName {
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.genrePieLegendValue {
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.pieTooltip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 20px var(--shadow);
+  font-size: 13px;
+  color: var(--text);
+}
+
+.pieTooltipDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.pieTooltipName {
+  flex: 1;
+}
+
+.genrePieEmpty {
+  grid-column: span 2;
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .genrePieBody {
+    grid-template-columns: 1fr;
+  }
+}

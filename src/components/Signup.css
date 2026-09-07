@@ -1,0 +1,40 @@
+/* Signup genre picker (minimal + theme-aware) */
+.genrePicker{
+  width: 80%;
+  margin-top: 18px;
+}
+
+.genreTitle{
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+.genreChips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.genreChip{
+  border: 1px solid var(--border);
+  background: var(--chip-bg);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.genreChip.active{
+  background: var(--accent);
+  border-color: transparent;
+  color: #0b1220;
+}
+
+.genreChip:disabled{
+  opacity: 0.7;
+  cursor: not-allowed;
+}
