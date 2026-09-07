@@ -52,7 +52,6 @@ const About = () => {
             transition={{ duration: 0.6}}
             viewport={{ once: true, amount: 0.2 }}>
             <div className="con2">
-              <img src="pp.gif" alt="" />
               <h1 className="hp">POPTALE</h1>
               <p className='pe'>Entertainment isn’t just content. It’s a tale worth popping into.</p>
             </div>
