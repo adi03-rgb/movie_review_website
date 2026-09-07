@@ -21,9 +21,7 @@
 
 ## 🚀 Live Demo
 
-- 🌐 **Live Website:** [Launch Poptale](https://your-poptale-url.vercel.app) *(Update with your Vercel URL)*
-- ⚡ **Backend API:** [API Health](https://your-backend-url.onrender.com) *(Update with your Render URL)*
-
+- 🌐 **Live Website:** [Launch Website](https://movie-review-website-gamma.vercel.app/)
 ---
 
 ## ✨ Why Poptale?
