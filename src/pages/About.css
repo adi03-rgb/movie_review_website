@@ -1,65 +1,73 @@
 .hero{
     position: relative;
-    min-height: 75vh;
+    height: 70vh;
+    min-height: 480px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 40px;
 }
 .bg.left{
     left: 0;
-    top: 0;
+    top: -5%;
     position: absolute;
-    height: 100%;
+    height: 110%;
     width: 100%;
     background: var(--hero-gradient);
+    transform: skewY(-3deg);
+    transform-origin: top left;
 }
 
 .content {
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 60px 24px;
+  padding: 40px 24px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .con2{
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 16px;
+    gap: 12px;
 }
 .con2 img {
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
     object-fit: contain;
-    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.4));
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.5));
 }
 .hp{
-    font-size: clamp(3rem, 7vw, 6rem);
+    font-size: clamp(3.2rem, 7vw, 5.5rem);
     margin: 0;
     color: #fff;
     font-weight: 900;
     letter-spacing: 2px;
+    text-shadow: 0 4px 18px rgba(0,0,0,0.6);
 }
 .pe{
     position: static;
     padding: 0;
     margin: 0;
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 700px;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 650px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
 .cont{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 24px;
+    position: relative;
+    z-index: 2;
+    clear: both;
+    max-width: 1100px;
+    margin: 40px auto 80px;
+    padding: 20px 24px 60px;
     display: flex;
     flex-direction: column;
     gap: 40px;
